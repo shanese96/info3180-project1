@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{url_for('static', filename='individual.css')}}" type="text/css" />
+{% endblock %}
+
+{% block main %}
+<div id="content">
+        <div id="dets">
+            <div id="userdets">
+                <img src="{{ url_for('static', filename=photo) }}" id="pic" class="info">
+                <div class="info dets">
+                    <h4 id="username">{{name}}</h4>
+                    <p><i class="material-icons"> email</i>{{email}}</p>
+                    <p><i class="material-icons"> location_on</i>{{location}}</p>
+                    <p><i class="material-icons"> date_range</i>Joined on {{registered}}</p>
+                </div>
+            </div>
+            <div id="bio">
+                <h4>About Me</h4>
+                <p>{{bio}}</p>
+            </div>
+        </div>
+        <div id="options">
+            <button class="btn btn-success btntxt" id="send">Send Message</button>
+            <button class="btn btn-primary btntxt" id="follow">Follow</button>
+        </div>
+    </div>
+{% endblock %}

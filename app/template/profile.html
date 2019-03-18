@@ -1,0 +1,46 @@
+{% extends base.html %}
+
+{% block title %} Profile {% endblock %} 
+
+{% block css %}
+    <link rel="stylesheet" href="{{url_for('static', filename='profile.css')}}" type="text/css" />
+{% endblock %}
+
+{% block main %}
+<h1>Add Profile</h1>
+
+<div id="form">
+    <form method="POST" action="/profile" enctype="multipart/form-data">
+        {{ form.csrf_token }}
+    
+        <label for="">First Name</label> 
+        {{ form.firstname(size=20) }}
+    
+        <label for="">Last Name</label> 
+        {{ form.lastname(size=20) }}
+    
+        <label for="">Gender</label> 
+        {{ form.gender }}
+    
+        <label for="">Email</label> 
+        {{ form.email }}
+    
+        <label for="">Location</label> 
+        {{ form.location(size=20) }}
+    
+        <label for="">Biography</label> 
+        {{ form.biography(size=1000) }}
+    
+        <label for="">Profile Picture</label> 
+        {{ form.photo(id="upload", hidden="hidden", onchange="loadFile(event)") }}
+        <button onclick="event.preventDefault();document.getElementById('upload').click()">Browse</button>
+        <img id="output">
+        
+        <input type="submit" value="Add Profile" class="btn btn-success btntxt">
+    </form>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" src="{{ url_for('static', filename='profile.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,67 @@
+h1{
+    color: grey;
+}
+
+p{
+    color: white;
+    size: 18px; 
+}
+
+.pic{
+    width: 20%;
+    max-height: auto;
+    vertical-align: top;
+    display: inline-block;
+    padding-top: 1em;
+}
+
+div{
+    max-height: 20em;
+    max-width: 60%;
+    padding: 0.5em;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 0 1em 1em 1em;
+    border-top: 5px solid #007bff!important;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.username{
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+div ul, div a{
+    display: inline-block;
+}
+
+div a{
+    height: 100%;
+    vertical-align: top;
+    margin-top: 2em;
+    margin-right: 2em;
+    float: clear;
+    float: right;
+}
+
+div ul{
+    list-style-type: none;
+    height: 100%;
+}
+
+div li{
+    margin: 0.5em;
+}
+
+div button{
+    
+    padding: 0 2em;
+}
+
+.btntxt{
+    font-weight: bold;
+}
+
